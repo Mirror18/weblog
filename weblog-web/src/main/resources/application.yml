@@ -4,4 +4,4 @@ server:
 spring:
   profiles:
     # 默认激活dev 环境
-    active: prod
+    active: dev
