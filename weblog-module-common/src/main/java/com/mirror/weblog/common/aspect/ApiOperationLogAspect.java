@@ -47,7 +47,7 @@ public class ApiOperationLogAspect {
 
         //请求开始时间
         long startTime = System.currentTimeMillis();
-        //MDC 用于存储信息的，可以理解为thread local
+        //MDC 可以理解为thread local，traceId表示跟踪ID，
         MDC.put("traceId", UUID.randomUUID().toString());
         //获取被请求的类和方法
         String className = joinPoint.getTarget().getClass().getSimpleName();
