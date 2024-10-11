@@ -47,6 +47,8 @@ public class TestController {
 //        // 返参
 //        return ResponseEntity.ok("参数没有任何问题");
 //    }
+
+
     //测试自定义响应类型
 //    public Response test(@RequestBody @Validated User user, BindingResult bindingResult) {
 //        // 是否存在校验错误
@@ -64,20 +66,25 @@ public class TestController {
 //        return Response.success();
 //    }
 
-//    //测试全局异常之自定义异常
+    //测试全局异常之自定义异常
 //    public Response test(@RequestBody @Validated User user, BindingResult bindingResult) {
 //        // 手动抛异常，入参是前面定义好的异常码枚举，返参统一交给全局异常处理器搞定
 //        throw new BizException(ResponseCodeEnum.PRODUCT_NOT_FOUND);
 //    }
 
     //处理运行异常
-    public Response test(@RequestBody @Validated User user, BindingResult bindingResult) {
-        // 主动定义一个运行时异常，分母不能为零
-        int i = 1 / 0;
+//    public Response test(@RequestBody @Validated User user, BindingResult bindingResult) {
+//        // 主动定义一个运行时异常，分母不能为零
+//        int i = 1 / 0;
+//        return Response.success();
+//    }
+
+    //参数校验
+    public Response test(@RequestBody @Validated User user) {
         return Response.success();
     }
 
-
+    @ApiOperationLog(description = "测试接口")
     //没有全局异常管理的时候
     @GetMapping("/product/{id}")
     public ResponseEntity<String> getProduct(@PathVariable String id) {
