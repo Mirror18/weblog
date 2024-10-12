@@ -1,11 +1,15 @@
 package com.mirror.weblog.web.controller;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mirror.weblog.common.aspect.ApiOperationLog;
 import com.mirror.weblog.common.exception.BizException;
 import com.mirror.weblog.common.exception.ResponseCodeEnum;
+import com.mirror.weblog.common.utils.JsonUtil;
 import com.mirror.weblog.common.utils.Response;
 import com.mirror.weblog.web.model.User;
+import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindException;
 import org.springframework.validation.BindingResult;
@@ -13,6 +17,9 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.validation.FieldError;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.stream.Collectors;
 
 /**
@@ -80,8 +87,21 @@ public class TestController {
 //    }
 
     //参数校验
+//    public Response test(@RequestBody @Validated User user) {
+//        return Response.success();
+//    }
+
+    //测试新加的user 信息
     public Response test(@RequestBody @Validated User user) {
-        return Response.success();
+        // 打印入参
+        log.info(JsonUtil.toJsonString(user));
+
+        // 设置三种日期字段值
+        user.setCreateTime(LocalDateTime.now());
+        user.setUpdateDate(LocalDate.now());
+        user.setTime(LocalTime.now());
+
+        return Response.success(user);
     }
 
     @ApiOperationLog(description = "测试接口")
