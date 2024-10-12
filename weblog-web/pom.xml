@@ -35,6 +35,20 @@
         <!--            <artifactId>spring-boot-starter-aop</artifactId>-->
         <!--        </dependency>-->
 
+<!--        &lt;!&ndash; knife4j（API 文档工具） &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>com.github.xiaoymin</groupId>-->
+<!--            <artifactId>knife4j-openapi2-spring-boot-starter</artifactId>-->
+<!--            <version>${knife4j.version}</version>-->
+<!--        </dependency>-->
+<!--        &lt;!&ndash; Springdoc OpenAPI 依赖 &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.springdoc</groupId>-->
+<!--            <artifactId>springdoc-openapi-ui</artifactId>-->
+<!--        </dependency>-->
+
+
+
         <!-- 免写冗余的 Java 样板式代码 -->
         <dependency>
             <groupId>org.projectlombok</groupId>

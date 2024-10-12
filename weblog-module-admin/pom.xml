@@ -34,10 +34,18 @@
             <scope>test</scope>
         </dependency>
 
+<!--        &lt;!&ndash; knife4j（API 文档工具） &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>com.github.xiaoymin</groupId>-->
+<!--            <artifactId>knife4j-openapi2-spring-boot-starter</artifactId>-->
+<!--            <version>${knife4j.version}</version>-->
+<!--        </dependency>-->
+
         <dependency>
             <groupId>com.mirror</groupId>
             <artifactId>weblog-module-common</artifactId>
         </dependency>
+
 
     </dependencies>
 </project>
