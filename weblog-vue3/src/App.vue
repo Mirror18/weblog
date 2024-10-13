@@ -15,6 +15,8 @@ import TheWelcome from './components/TheWelcome.vue'
   <main>
     <TheWelcome />
   </main>
+<!--  动态渲染与当前路径匹配的组件-->
+  <router-view></router-view>
 </template>
 
 <style scoped>
