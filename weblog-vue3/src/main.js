@@ -3,7 +3,7 @@ import App from './App.vue'     // 引入 App.vue 组件
 
 // 引入 main.css 样式文件
 import './assets/main.css'
-
+//导入路由
 import router from "@/router/index.js";
 
 
