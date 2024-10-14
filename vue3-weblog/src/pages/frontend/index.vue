@@ -1,14 +1,18 @@
 <template>
+<!--  导航栏-->
   <nav class="bg-white border-gray-200 border-b dark:bg-gray-900">
+<!--    <p>这个组件已经挂载！</p>-->
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+<!--      点击链接，用于左上角返回首页-->
       <a href="/" class="flex items-center">
         <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo"/>
         <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">mirror的博客</span>
       </a>
       <div class="flex items-center md:order-2">
+<!--        按钮，用于点搜索-->
         <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search"
                 aria-expanded="false"
-                class="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 mr-1">
+                class=" md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 mr-1">
           <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                viewBox="0 0 20 20">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -16,6 +20,7 @@
           </svg>
           <span class="sr-only">Search</span>
         </button>
+<!--        搜索图标的样式-->
         <div class="relative hidden mr-2 md:block">
           <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
             <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
@@ -25,6 +30,7 @@
             </svg>
             <span class="sr-only">Search icon</span>
           </div>
+<!--          占位符-->
           <input type="text" id="search-navbar"
                  class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                  placeholder="请输入关键词...">
@@ -32,7 +38,7 @@
 
         <!-- 登录 -->
         <div class="text-gray-900 ml-1 mr-1 hover:text-blue-700" @click="$router.push('/login')">登录</div>
-
+<!--搜索菜单-->
         <button data-collapse-toggle="navbar-search" type="button"
                 class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                 aria-controls="navbar-search" aria-expanded="false">
@@ -88,6 +94,7 @@ import {initCollapses} from 'flowbite'
 
 // 初始化 flowbit 相关组件
 onMounted(() => {
+  console.log('组件挂载，初始化 Flowbite');
   initCollapses();
 })
 </script>
