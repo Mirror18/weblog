@@ -71,6 +71,12 @@
             <groupId>com.mirror</groupId>
             <artifactId>weblog-module-admin</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+            <version>3.0.3</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <build>
