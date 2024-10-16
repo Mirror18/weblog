@@ -132,6 +132,13 @@ public class TestController {
         }
     }
 
+    @PostMapping("/admin/test")
+    @ApiOperationLog(description = "测试验证接口")
+    public Response<Object> testAdmin(@RequestBody @Validated User user) {
+        log.info(JsonUtil.toJsonString(user));
+
+        return Response.success();
+    }
 
 
 }
