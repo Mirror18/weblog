@@ -29,6 +29,7 @@
         <module>weblog-module-admin</module>
         <!-- 通用模块 -->
         <module>weblog-module-common</module>
+        <module>weblog_module_jwt</module>
     </modules>
 
 
@@ -70,6 +71,11 @@
                 <version>${revision}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.mirror</groupId>
+                <artifactId>weblog_module_jwt</artifactId>
+                <version>${revision}</version>
+            </dependency>
             <!-- 常用工具库 -->
             <dependency>
                 <groupId>com.google.guava</groupId>
