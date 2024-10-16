@@ -48,10 +48,10 @@
         <guava.version>33.3.1-jre</guava.version>
         <commons-lang3.version>3.17.0</commons-lang3.version>
         <jackson.version>2.17.2</jackson.version>
-<!--        <knife4j.version>4.5.0</knife4j.version>-->
-<!--        <openapi-ui>1.7.0</openapi-ui>-->
+        <!--        <knife4j.version>4.5.0</knife4j.version>-->
+        <!--        <openapi-ui>1.7.0</openapi-ui>-->
         <mybatis-plus.version>3.5.8</mybatis-plus.version>
-
+        <p6spy.version>3.9.1</p6spy.version>
     </properties>
 
     <!-- 统一依赖管理 -->
@@ -90,30 +90,30 @@
                 <version>${jackson.version}</version>
             </dependency>
 
-<!--            <dependency>-->
-<!--                <groupId>org.aspectj</groupId>-->
-<!--                <artifactId>aspectjweaver</artifactId>-->
-<!--                <version>1.9.19</version>-->
-<!--            </dependency>-->
-<!--            <dependency>-->
-<!--                <groupId>org.aspectj</groupId>-->
-<!--                <artifactId>aspectjrt</artifactId>-->
-<!--                <version>1.9.19</version>-->
-<!--            </dependency>-->
+            <!--            <dependency>-->
+            <!--                <groupId>org.aspectj</groupId>-->
+            <!--                <artifactId>aspectjweaver</artifactId>-->
+            <!--                <version>1.9.19</version>-->
+            <!--            </dependency>-->
+            <!--            <dependency>-->
+            <!--                <groupId>org.aspectj</groupId>-->
+            <!--                <artifactId>aspectjrt</artifactId>-->
+            <!--                <version>1.9.19</version>-->
+            <!--            </dependency>-->
 
-<!--            &lt;!&ndash; knife4j（API 文档工具） &ndash;&gt;-->
-<!--            <dependency>-->
-<!--                <groupId>com.github.xiaoymin</groupId>-->
-<!--                <artifactId>knife4j-openapi2-spring-boot-starter</artifactId>-->
-<!--                <version>${knife4j.version}</version>-->
-<!--            </dependency>-->
+            <!--            &lt;!&ndash; knife4j（API 文档工具） &ndash;&gt;-->
+            <!--            <dependency>-->
+            <!--                <groupId>com.github.xiaoymin</groupId>-->
+            <!--                <artifactId>knife4j-openapi2-spring-boot-starter</artifactId>-->
+            <!--                <version>${knife4j.version}</version>-->
+            <!--            </dependency>-->
 
-<!--            &lt;!&ndash; Springdoc OpenAPI 依赖 &ndash;&gt;-->
-<!--            <dependency>-->
-<!--                <groupId>org.springdoc</groupId>-->
-<!--                <artifactId>springdoc-openapi-ui</artifactId>-->
-<!--                <version>${openapi-ui}</version>-->
-<!--            </dependency>-->
+            <!--            &lt;!&ndash; Springdoc OpenAPI 依赖 &ndash;&gt;-->
+            <!--            <dependency>-->
+            <!--                <groupId>org.springdoc</groupId>-->
+            <!--                <artifactId>springdoc-openapi-ui</artifactId>-->
+            <!--                <version>${openapi-ui}</version>-->
+            <!--            </dependency>-->
 
             <!-- Mybatis Plus -->
             <dependency>
@@ -121,7 +121,12 @@
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis-plus.version}</version>
             </dependency>
-
+            <!--打印执行SQL-->
+            <dependency>
+                <groupId>p6spy</groupId>
+                <artifactId>p6spy</artifactId>
+                <version>${p6spy.version}</version>
+            </dependency>
 
         </dependencies>
 

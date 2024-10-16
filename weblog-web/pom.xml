@@ -77,6 +77,11 @@
             <version>3.0.3</version>
             <scope>compile</scope>
         </dependency>
+
+        <dependency>
+            <groupId>p6spy</groupId>
+            <artifactId>p6spy</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
