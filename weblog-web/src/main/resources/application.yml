@@ -15,3 +15,9 @@ spring:
 #    default-property-inclusion: non_null
 #    # 设置日期字段格式
 #    date-format: yyyy-MM-dd HH:mm:ss
+
+jwt:
+  # 签发人
+  issuer: mirror
+  # 秘钥
+  secret: /OiirLw0VKlYNVa6E1W3gmopD7sLRgk8k38A80PS5OBugQaoFg1nQUTtSpxMQzeB8jLdYChaiY6dGB2Yj36J3g==
